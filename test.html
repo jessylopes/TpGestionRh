@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tests Unitaires - To-Do List</title>
+</head>
+
+<body>
+    <h1>Résultats des Tests Unitaires :</h1>
+    <pre id="test-results"></pre>
+    <form id="task-form" style="display:none;">
+        <input type="text" id="task-input">
+        <button type="submit">Ajouter</button>
+    </form>
+    <ul id="task-list" style="display:none;"></ul>
+    <!-- Inclure le code de l'application -->
+    <script src="app.js"></script>
+
+    <script>
+        // Fonction d'assertion simple
+        function assertEquals(actual, expected, testName) {
+            const results = document.getElementById('test-results');
+            if (actual === expected) {
+                results.textContent += `✔️ ${testName} : Réussi\n`;
+            } else {
+                results.textContent += `❌ ${testName} : Échoué\n   Attendu : ${expected}\\n   Obtenu : ${actual}\\n`;
+            }
+        }
+        runTests();
+    </script>
+</body>
+
+</html>
