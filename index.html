@@ -1,0 +1,25 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gestion RH</title>
+</head>
+<body>
+    <h1>Bienvenue dans le système de gestion RH</h1>
+    <button onclick="afficherEmployes()">Afficher la liste des employés</button>
+    <div id="liste-employes"></div>
+
+    <!-- Section pour ajouter un employé -->
+    <h3>Ajouter un employé</h3>
+    <input type="text" id="ajout-nom" placeholder="Nom">
+    <input type="text" id="ajout-poste" placeholder="Poste">
+    <button onclick="ajouterEmployeManuel()">Ajouter</button>
+
+    <!-- Section pour supprimer un employé -->
+    <h3>Supprimer un employé</h3>
+    <input type="number" id="supprimer-id" placeholder="ID">
+    <button onclick="supprimerEmployeManuel()">Supprimer</button>
+
+    <script src="app.js"></script>
+</body>
+</html>
